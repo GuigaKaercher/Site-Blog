@@ -1,4 +1,5 @@
-import { CustumerStorySection } from "@/components/custumer-story-section";
+
+import CustumerStorySection from "@/components/custumer-story-section/custumer-story-section";
 import { FeatureSection } from "@/components/feature-section";
 import { HeroSection } from "@/components/hero-section";
 import { SupportSection } from "@/components/support-section";
