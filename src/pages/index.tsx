@@ -5,7 +5,10 @@ import { FeatureSection } from "@/components/feature-section";
 import { HeroSection } from "@/components/hero-section";
 import { SupportSection } from "@/components/support-section";
 
+import {allPosts} from '.contentlayer/generated'
+
 export default function Home() {
+  console.log(allPosts)
   return (
     <>
     <article className="flex flex-col" >
