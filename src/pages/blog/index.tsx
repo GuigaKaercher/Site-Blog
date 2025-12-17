@@ -1,6 +1,12 @@
 import { Search } from "@/components/search";
+import { PostCard } from "@/components/post-card";
+import { allPosts } from ".contentlayer/generated";
 
 export default function BlogPage() {
+    const sortedPosts = allPosts.sort((a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+
     return (
         <>
             <div className="flex flex-col py-24 flex-grow h-full">
@@ -24,7 +30,15 @@ export default function BlogPage() {
                         <Search/>
                     </div>
                 </header>
+
                 {/*listagem de posts*/}
+                <section className="container mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {sortedPosts.map((post) => (
+                            <PostCard key={post._id} post={post} />
+                        ))}
+                    </div>
+                </section>
 
             </div>
         </>
