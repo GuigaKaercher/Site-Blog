@@ -4,12 +4,12 @@ export default function BlogPage() {
     return (
         <>
             <div className="flex flex-col py-24 flex-grow h-full">
-                <header>
+                <header className="container">
                     {/*tag*/}
-                    <div className="container space-y-6 flex flex-col items-start justify-between md:flex-row md:items-end
+                    <div className="space-y-6 flex flex-col items-start justify-between md:flex-row md:items-end
             lg:items-end">
                         <div className="flex flex-col gap-4 md:px-0">
-                            <span className="text-body-tag text-cyan-100 w-fit rounded-md text-center md:text-left 
+                            <span className="text-body-tag text-cyan-100 w-fit rounded-md text-center md:text-left
                 py-2 px-4 bg-cyan-300">BLOG</span>
 
                             {/*titulo*/}
@@ -18,9 +18,12 @@ export default function BlogPage() {
                         </div>
 
                     </div>
+
+                    {/*search*/}
+                    <div className="mt-8">
+                        <Search/>
+                    </div>
                 </header>
-                 {/*search*/}
-                <Search/>
                 {/*listagem de posts*/}
 
             </div>
